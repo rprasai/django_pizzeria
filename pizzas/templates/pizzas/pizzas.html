@@ -5,7 +5,6 @@
 
     {% for pizza in pizzas %}
     <li>
-        <h2><img src="{{pizza.image.url}}" class="img-thumbnail" style="max-height:150px;" alt=""></h2>
         <a href="{% url 'pizzas:pizza' pizza.id%}">{{pizza}}</a>
     </li>
     {% empty %}

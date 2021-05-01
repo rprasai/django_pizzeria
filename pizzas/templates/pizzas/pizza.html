@@ -3,6 +3,7 @@
 
 <p>Pizza: {{ pizza }}</p>
 <ul>
+    <h2><img src="{{pizza.image.url}}" class="img-thumbnail" style="max-height:150px;" alt=""></h2>
     {% for topping in toppings %}
     <li>
         <p>{{topping.date_added|date:'M d,Y H:i'}}</p>
