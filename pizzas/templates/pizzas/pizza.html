@@ -5,9 +5,9 @@
 <ul>
     {% for topping in toppings %}
     <li>
+        <p>{{topping.date_added|date:'M d,Y H:i'}}</p>
+        <p>{{topping.name|linebreaks}}</p>
 
-        <p>{{pizza.date_added|date:'M d,Y H:i'}}</p>
-        <p>{{pizza.name|linebreaks}}</p>
     </li>
     {% empty %}
     <li>No toppings for this pizza </li>
