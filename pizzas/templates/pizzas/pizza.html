@@ -2,16 +2,27 @@
 {% block content %}
 
 <p>Pizza: {{ pizza }}</p>
+<h2><img src="{{pizza.image.url}}" class="img-thumbnail" style="max-height:150px;" alt=""></h2>
+<div>Toppings</div>
 <ul>
-    <h2><img src="{{pizza.image.url}}" class="img-thumbnail" style="max-height:150px;" alt=""></h2>
     {% for topping in toppings %}
     <li>
         <p>{{topping.date_added|date:'M d,Y H:i'}}</p>
         <p>{{topping.name|linebreaks}}</p>
-
     </li>
     {% empty %}
     <li>No toppings for this pizza </li>
+    {% endfor %}
+</ul>
+<div>Comments</div>
+<ul>
+    {% for comment in comments %}
+    <li>
+        <p>{{ comment.text }}</p>
+        <p>{{comment.date_added|date:'M d,Y H:i'}}</p>
+    </li>
+    {% empty %}
+    <li>No Comments for this pizza </li>
     {% endfor %}
 </ul>
 {% endblock content %}
