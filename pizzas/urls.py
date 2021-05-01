@@ -4,5 +4,5 @@ from django.urls import path
 from . import views
 
 app_name = 'pizzas'
-urlpattern = [path ('',views.index, name='index'),]
+urlpatterns = [path ('',views.index, name='index'),]
 
