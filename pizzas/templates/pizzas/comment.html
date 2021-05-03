@@ -1,11 +1,13 @@
 {% extends "pizzas/base.html" %}
+{% load bootstrap4 %}
+
 
 {% block content %}
 <p>Add Comment:</p>
 
-<form action="{% url 'pizzas:comment' pizza_id %}" method='post'>
+<form action="{% url 'pizzas:comment' pizza_id %}" method='post' class="form">
     {% csrf_token %}
-    {{form.as_p}}
+    {% bootstrap_form form layout='inline' %}
     <button name="submit">Post Comment</button>
 </form>
 

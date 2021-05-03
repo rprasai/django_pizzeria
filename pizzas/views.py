@@ -33,3 +33,5 @@ def comment(request, pizza_id):
             return redirect('pizzas:pizzas')
     context={'form':form, 'pizza_id': pizza_id}
     return render(request,'pizzas/comment.html',context)
+
+# def homepage(request):
