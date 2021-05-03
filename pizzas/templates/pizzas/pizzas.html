@@ -1,17 +1,20 @@
 {% extends "pizzas/base.html" %}
 {% block content %}
-<p style="color:rgb(2, 63, 58);font-size:20px;">Pizzas</p>
-<ul>
 
-    {% for pizza in pizzas %}
-    <li>
-        <a style="font-size:24px;" href="{% url 'pizzas:pizza' pizza.id%}">{{pizza}}</a>
-        <div></div>
-        <a style="color:blue;font-size:10px;" href="{% url 'pizzas:comment' pizza.id %}">Post Comment</a>
-    </li>
-    {% empty %}
-    <li>Zero Pizza Added</li>
-    {% endfor %}
-</ul>
+<body style="background-color:rgb(185, 219, 174)">
+    <p style="color:rgb(2, 63, 58);font-size:20px;">Pizzas</p>
+    <ul>
+
+        {% for pizza in pizzas %}
+        <li>
+            <a style="font-size:24px;" href="{% url 'pizzas:pizza' pizza.id%}">{{pizza}}</a>
+            <div></div>
+            <a style="color:blue;font-size:10px;" href="{% url 'pizzas:comment' pizza.id %}">Post Comment</a>
+        </li>
+        {% empty %}
+        <li>Zero Pizza Added</li>
+        {% endfor %}
+    </ul>
+</body>
 <!-- <a href="{% url 'pizzas:comment'}">Add a Comment</a> -->
 {% endblock content %}
