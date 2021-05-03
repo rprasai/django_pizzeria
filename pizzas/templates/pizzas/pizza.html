@@ -7,8 +7,9 @@
 <ul>
     {% for topping in toppings %}
     <li>
-        <p>{{topping.date_added|date:'M d,Y H:i'}}</p>
+
         <p>{{topping.name|linebreaks}}</p>
+        <p style="color:blue;font-size:8px;">{{topping.date_added|date:'M d,Y H:i'}}</p>
     </li>
     {% empty %}
     <li>No toppings for this pizza </li>
@@ -19,7 +20,7 @@
     {% for comment in comments %}
     <li>
         <p>{{ comment.text }}</p>
-        <p>{{comment.date_added|date:'M d,Y H:i'}}</p>
+        <p style="color:blue;font-size:8px;">{{comment.date_added|date:'M d,Y H:i'}}</p>
     </li>
     {% empty %}
     <li>No Comments for this pizza </li>
