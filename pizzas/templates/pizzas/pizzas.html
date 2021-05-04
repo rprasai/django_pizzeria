@@ -7,7 +7,7 @@
 
         {% for pizza in pizzas %}
         <li>
-            <a style="font-size:24px;" href="{% url 'pizzas:pizza' pizza.id%}">{{pizza}}</a>
+            <a style="font-size:24px;" href="{% url 'pizzas:piz' pizza.id%}">{{pizza}}</a>
             <div></div>
             <a style="color:blue;font-size:10px;" href="{% url 'pizzas:comment' pizza.id %}">Post Comment</a>
         </li>

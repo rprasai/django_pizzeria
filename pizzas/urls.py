@@ -6,6 +6,6 @@ from . import views
 app_name = 'pizzas'
 urlpatterns = [path ('',views.index, name='index'), 
 path ('pizzas',views.pizzas, name='pizzas'),
-path ('pizzas/<int:pizza_id>/',views.pizza, name='pizza'),
+path ('piz/<int:pizza_id>/',views.piz, name='piz'),
 path ('pizzas/<int:pizza_id>/comment/',views.comment, name='comment'),]
 
